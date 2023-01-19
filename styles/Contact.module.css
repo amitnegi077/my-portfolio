@@ -1,0 +1,90 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.main {
+  text-align: center;
+}
+.main h1 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.main p {
+  width: 550px;
+  margin: auto;
+  color: #9c9c9c;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer .form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formItem {
+  display: flex;
+  flex-direction: column;
+}
+.formItem label {
+  color: #ffffff;
+}
+.formItem input,
+.formItem textarea {
+  background: #f8f8f8;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  padding: 12px;
+}
+.formItem input::placeholder,
+.formItem textarea::placeholder {
+  color: #757575;
+  font-size: 14px;
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.submitButton {
+  margin-top: 1rem;
+  height: 3rem;
+  cursor: pointer;
+  background: #3f8e00;
+  border: 1px solid #62ba1b;
+  box-shadow: 0px 8px 30px rgba(63, 142, 0, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+.labelContainer {
+  position: relative;
+}
+.required {
+  color: red;
+  position: absolute;
+  top: -2px;
+}
+
+@media screen and (max-width: 720px) {
+  .contact {
+    padding: 2rem;
+  }
+  .main p {
+    width: auto;
+  }
+  .formContainer {
+    width: 100%;
+  }
+  .formContainer .form {
+    width: 100%;
+  }
+}
