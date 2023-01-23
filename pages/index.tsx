@@ -3,6 +3,7 @@ import Image from "next/image";
 import { IBM_Plex_Mono, Raleway } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import profilePic from "../public/Amit.jpg";
+import { useRouter } from "next/router";
 
 export const ibm = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -16,6 +17,7 @@ export const raleway = Raleway({
 });
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -57,7 +59,10 @@ export default function Home() {
               looking forward to working on projects that will allow me to
               utilize my skills and experience to deliver quality work.
             </p>
-            <button className={`${styles.mainBtn} ${ibm.className}`}>
+            <button
+              onClick={() => router.push("/contact")}
+              className={`${styles.mainBtn} ${ibm.className}`}
+            >
               Connect with me
             </button>
           </div>
@@ -65,53 +70,50 @@ export default function Home() {
           <div className={styles.workPartnersContainer}>
             <h3>Worked With</h3>
             <div className={styles.workPartners}>
-              <div className={styles.box}>
-                <h2>
-                  <a
-                    href="https://asvalabs.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Asva Labs
-                  </a>
-                </h2>
-              </div>
-              <div className={styles.box}>
-                <a
-                  href="https://buidlerstribe.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Builders Tribe</h2>
-                </a>
-              </div>
-              <div className={styles.box}>
-                <a
-                  href="https://www.ikonwork.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Ikonwork</h2>
-                </a>
-              </div>
-              <div className={styles.box}>
-                <a
-                  href="https://rightvisionsecurity.in/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Right Vision Security</h2>
-                </a>
-              </div>
-              <div className={styles.box}>
-                <a
-                  href="https://cliniker.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h2>Cliniker</h2>
-                </a>
-              </div>
+              <a
+                className={styles.box}
+                href="https://asvalabs.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>Asva Labs</h2>
+              </a>
+
+              <a
+                className={styles.box}
+                href="https://buidlerstribe.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>Builders Tribe</h2>
+              </a>
+
+              <a
+                className={styles.box}
+                href="https://www.ikonwork.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>Ikonwork</h2>
+              </a>
+
+              <a
+                className={styles.box}
+                href="https://rightvisionsecurity.in/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>Right Vision Security</h2>
+              </a>
+
+              <a
+                className={styles.box}
+                href="https://cliniker.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>Cliniker</h2>
+              </a>
             </div>
           </div>
         </div>

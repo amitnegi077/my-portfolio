@@ -41,9 +41,10 @@ function index() {
     <div className={`${styles.container} ${ibm.className}`}>
       <h1>Recent Work</h1>
       <p>
-        Solving user & business problems since last 15+ years. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua.{" "}
+        I am proud to have worked on a wide range of projects throughout my
+        career, and I am excited to share some of my best work with you. <br />
+        <br />
+        Here are some of the projects I have worked on recently.
       </p>
 
       <div className={styles.cardContainer}>

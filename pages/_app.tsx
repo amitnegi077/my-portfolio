@@ -6,8 +6,10 @@ import Footer from "../components/Footer";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navbar />
-      <Component {...pageProps} />
+      <div className="layoutWrapper">
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </>
   );

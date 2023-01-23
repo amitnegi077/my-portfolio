@@ -1,4 +1,5 @@
 .contact {
+  padding: 2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,9 +15,20 @@
   margin-bottom: 1rem;
 }
 .main p {
-  width: 550px;
+  max-width: 650px;
   margin: auto;
   color: #9c9c9c;
+}
+.list {
+  margin: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.list li b:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 .formContainer {
   display: flex;
@@ -72,6 +84,25 @@
   color: red;
   position: absolute;
   top: -2px;
+}
+
+.successContainer {
+  margin: 2rem;
+  padding: 3rem 2rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 4px;
+  background: #fff;
+  text-align: center;
+}
+.checkImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #fff;
 }
 
 @media screen and (max-width: 720px) {

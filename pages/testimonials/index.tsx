@@ -7,8 +7,10 @@ function index() {
     <div className={`${styles.conatiner} ${ibm.className}`}>
       <h1>Testimonials</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.{" "}
+        I believe that a good developer is not only one who writes good code but
+        also one who is easy to work with, communicative and has a positive
+        attitude. These testimonials will give you a glimpse of my work ethics
+        and how I interact with my team and clients.
       </p>
 
       <div className={styles.grid}>
