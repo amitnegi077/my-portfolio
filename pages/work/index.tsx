@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { ibm } from "..";
 import styles from "../../styles/Work.module.css";
@@ -8,7 +9,7 @@ const recentWorks = [
     id: 1,
     name: "Metalaunch Website",
     shortDescription:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur iusto veritatis.",
+      "Metalaunch website listing showcasing upcoming projects, token utilities and partners.",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur iusto veritatis. Cumque quod, esse natus enim voluptate maiores fugit facilis laborum facere ut laboriosam. Necessitatibus velit facilis ipsa corrupti.",
     posterImg: "/images/metalaunch.png",
@@ -18,7 +19,7 @@ const recentWorks = [
     id: 2,
     name: "Metalaunch App",
     shortDescription:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur iusto veritatis.",
+      "IDO Launchpad app where you can whitelist and participate in token sales using metamask wallet.",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur iusto veritatis. Cumque quod, esse natus enim voluptate maiores fugit facilis laborum facere ut laboriosam. Necessitatibus velit facilis ipsa corrupti.",
     posterImg: "/images/app-metalaunch.png",
@@ -28,7 +29,7 @@ const recentWorks = [
     id: 3,
     name: "Asvarium Website",
     shortDescription:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur iusto veritatis.",
+      "Website showcasing nft utilities and upcoming INO Launchpad platform and it's utilities ",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur iusto veritatis. Cumque quod, esse natus enim voluptate maiores fugit facilis laborum facere ut laboriosam. Necessitatibus velit facilis ipsa corrupti.",
     posterImg: "/images/asvarium.png",
@@ -60,9 +61,16 @@ function index() {
             <div className={styles.cardContent}>
               <h3>{item.name}</h3>
               <p>{item.shortDescription}</p>
-              <button className={`${styles.knowMoreBtn} ${ibm.className}`}>
-                Visit Site
-              </button>
+              <Link
+                href={item.websiteLink}
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: "contents" }}
+              >
+                <button className={`${styles.knowMoreBtn} ${ibm.className}`}>
+                  Visit Site
+                </button>
+              </Link>
             </div>
           </div>
         ))}
